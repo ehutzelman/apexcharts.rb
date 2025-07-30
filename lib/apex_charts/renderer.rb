@@ -98,7 +98,9 @@ module ApexCharts
     end
 
     def style
-      "#{height && "height: #{height}; "}#{attributes.delete(:style)}"
+      # stop setting height on div container element because of issues
+      # "#{height && "height: #{height}; "}#{attributes.delete(:style)}"
+      "#{attributes.delete(:style)}"
     end
 
     def window_apex
